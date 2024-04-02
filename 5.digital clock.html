@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function ro (){
+        let p=new Date();
+        let q=p.getHours();
+        let r=p.getMinutes();
+        let t="PM"
+        if (r<10){
+            r="0"+r;
+        }
+        let s=p.getSeconds();
+        if (s<10){
+            r="0"+r;
+        }
+        if (q<12){
+            t="AM"
+        }
+        document.getElementById("a").innerText = q;
+        document.getElementById("b").innerText = r;
+        document.getElementById("c").innerText = s;
+        document.getElementById("d").innerText = t;
+        ro()
+    }
+    setInterval(ro,1000)
+
+</script>
+<style>
+    body{
+        background-color:lawngreen;
+    }
+    *{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 60px;
+        font-weight: bolder;
+    }
+    
+    .box{
+        display:flex;
+        margin-left:28%;
+        margin-top:10%;
+    }
+    #a{
+        background-color: indigo;
+        height:70px;
+        width:70px;
+        color:white;
+       
+        border-width:5px;
+        border-color: aliceblue;
+        border-style:solid;
+        margin-right:30px;
+       padding:25px;
+    }
+    #b{
+        background-color: indigo;
+        height:70px;
+        width:70px;
+        color:white;
+        margin-right:30px;
+       
+        border-width:5px;
+        border-color: aliceblue;
+        border-style:solid;
+        padding:25px;
+        
+        
+    }
+    #c{
+        background-color: indigo;
+        height:70px;
+        width:70px;
+        color:white;
+        margin-right:30px;
+        padding:25px;
+       
+        border-width:5px;
+        border-color: aliceblue;
+        border-style:solid;
+        
+    }
+    #d{
+        background-color: indigo;
+        height:70px;
+        width:70px;
+        color:white;
+        padding:25px;
+       
+        border-width:5px;
+        border-color: aliceblue;
+        border-style:solid;
+    }
+    #e{
+        margin-top:1%;
+        height:100px;
+        width:200px;
+        background-color:linear-gradient(snow,deeppink);
+        margin: left 13%;
+
+    }
+</style>
+<body>
+    <h1><marquee>WELCOME TO MY DIGITAL CLOCK</marquee></h1>
+    <div class="box">
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+        <div id="d"></div>
+    </div>
+</body>
+
+</html>
+    

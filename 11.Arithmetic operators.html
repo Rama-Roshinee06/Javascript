@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function add(){
+       let a=document.getElementById("rama").value;
+       let b=document.getElementById("rosh").value;
+       console.log(a);
+       console.log(b);
+       let c=Number(a)+Number(b);
+       console.log("the sum is:"+c);
+       document.getElementById("rose").value=c;
+    }
+    function sub(){
+        let a=document.getElementById("rama").value;
+        let b=document.getElementById("rosh").value;
+        console.log(a);
+        console.log(b);
+        let c=Number(a)-Number(b);
+        document.getElementById("rose").value=c;
+     }
+     function mult(){
+        let a=document.getElementById("rama").value;
+        let b=document.getElementById("rosh").value;
+        console.log(a);
+        console.log(b);
+        let c=Number(a)*Number(b);
+        document.getElementById("rose").value=c;
+     }
+     function div(){
+         let a=document.getElementById("rama").value;
+         let b=document.getElementById("rosh").value;
+         console.log(a);
+         console.log(b);
+         let c=Number(a)/Number(b); 
+         document.getElementById("rose").value=c;
+      }
+
+</script>
+<style>
+    .box{
+        height:300px;
+        width:300px;
+        background-color:blanchedalmond;
+        color:darkgreen;
+        border:6px solid red;
+        margin-left:20%;
+        font-size:23px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top:10%;
+        padding-left:4%;
+    }
+    #er{
+        margin-left:34%;
+    }
+</style>
+<body>
+    <h1>A SIMPLE JS CODE TO ADD/SUB/MULTI/DIVIDE 2 NOS TAKEN AS USER INPUT</h1>
+    <div class="box">
+        <br>
+        <br>
+        <label>ENTER1:<input type="text" id="rama"></label>
+        <br>
+        <br>
+        <label>ENTER2:<input type="text" id="rosh"></label>
+        <br>
+        <br>
+        <button onclick="add()">ADD</button>
+        <button onclick="sub()">SUB</button>
+        <button onclick="mult()">MULTIPLY</button>
+        <button onclick="div()">DIV</button>
+        <br>
+        <br>
+        <label>THE ANSWER IS:<input type="text" id="rose"></label>
+    </div>
+</body>
+</html>

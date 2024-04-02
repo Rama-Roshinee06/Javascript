@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function ro(){
+        var bd=document.getElementById("r").value;
+        c=bd.split(".");
+        d=c[2];
+        var a=new Date();
+        var yr=Number(a.getFullYear());
+        let diff=Number(yr)-Number(d);
+        console.log(diff);
+        if(Number(yr)<Number(d)){
+            diff=Number(d)-Number(yr);
+        }
+        document.getElementById("ans").innerText="YOUR AGE IS:"+diff;
+        if(Number(d)>Number(yr)){
+            diff=Number(d)-Number(yr);
+            document.getElementById("ans").innerText="YOUR WILL BE BORN IN :"+diff+"YEARS";
+        }
+    }
+</script>
+<style>
+    .box{
+        display:flex;
+        flex-direction:row;
+        margin-left:20%;
+        margin-top:13%;
+    }
+    h1{
+        margin-left:24%;
+        margin-top:4%;
+        font-family: 'Times New Roman', Times, serif;  
+        font-style: solid;
+        font-weight:bolder;
+    }
+    .a{
+        height:50px;
+        width:200px;
+        background:linear-gradient(snow,deeppink);
+        border:4px black solid;
+        font-size:22px;
+        padding-top:1%;
+        margin-right:3%;
+    }
+    body{
+        background-color: rgb(230, 129, 255);
+    }
+    #r{
+        height:50px;
+        width:200px;
+        background:linear-gradient(snow,lavender);
+        border:4px black solid;
+        font-size:22px;
+        padding-top:1%;
+        margin-right:3%;
+    }
+    #ans{
+        height:100px;
+        width:300px;
+        background:linear-gradient(snow,lightcyan);
+        border:4px black solid;
+        margin-top:1%;
+        color:deeppink;
+        font-size:27px;
+        margin-left:25%;
+    }
+    button{
+        margin-top:2%;
+        margin-left:34%;
+        height:40px;
+    }
+</style>
+<body>
+    <h1>AGE CALCULATOR</h1>
+    <div class="box">
+        <div class="a">ENTER BDAY DATE</div>
+        <div id="b"><input id="r" type="text"></div>
+    </div>
+    <button  onclick="ro()">ENTER</button>
+    <div id="ans"></div>
+</body>
+</html>

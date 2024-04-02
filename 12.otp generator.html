@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function om(){
+        var minm = 100000;
+        var maxm = 999999;
+        let random=Math.floor(Math.random()*(maxm - minm + 1)+ minm);
+        document.getElementById("a3").innerText=random;
+    }
+</script>
+<style>
+    .a{
+        height:400px;
+        width:400px;
+        background:linear-gradient(snow,deeppink);
+        border:4px solid indigo;
+        margin-top:10%;
+        display:flex;
+        flex-direction:column;
+        margin-left:22%;
+    }
+    .a1{
+        height:40px;
+        width:400px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:35px;
+        color:indigo;
+        margin-top:5%;
+        padding-left:12%;
+    }
+    .a2{
+        height:50px;
+        width:400px;
+        }
+        button{
+            font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:30px;
+        margin-left:14%;
+        margin-top:8%;
+        color:rgb(46, 255, 19);
+        }
+    #a3{
+        height:50px;
+        width:260px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:39px;
+        color: deeppink;
+        background-color: azure;
+        border:3px dotted rebeccapurple;
+        margin-left:12%;
+        margin-top:20%;
+        padding-left:8%;
+    }
+    .p11{
+        background-color:green;
+    }
+</style>
+<body>
+    <div class="a">
+        <div class="a1">OTP GENERATOR</div>
+        <div class="a2"><button onclick="om()">GENERATE OTP</button></div>
+        <div id="a3"></div>
+    </div>
+</body>
+</html>

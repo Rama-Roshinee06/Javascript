@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list=["LIGHTSKYBLUE","LAWNGREEN","DEEPPINK","AQUA","CRIMSON","PINK","PURPLE","INDIGO"];
+   function rose(){
+        let random=Math.floor(Math.random()*(list.length));
+        document.getElementById("box").innerText=list[random];
+        document.getElementById("box").style.backgroundColor=list[random];
+    }
+</script>
+<style>
+    body{
+        background-color:black;
+    }
+    #box{
+        height:400px;
+        width: 100%;
+        border:4px black solid;
+        background-color:aquamarine;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:40px;
+        color:white;
+        margin-top:10%;
+        padding-left:30%;
+    }
+    button{
+        margin-left:40%;
+        margin-top:3%;
+    }
+</style>
+<body>
+    <div id="box"><u>COLOUR CHANGER</u></div>
+    <button onclick="rose()">NEXT</button>
+</body>
+</html>

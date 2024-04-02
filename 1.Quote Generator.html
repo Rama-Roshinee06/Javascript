@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var list=["Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring",
+    "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
+    "Be the change that you wish to see in the world.","You can’t go back and change the beginning, but you can start where you are and change the ending",
+    "It’s no use going back to yesterday, because I was a different person then","You can control two things: your work ethic and your attitude about anything.",
+    "Smart people learn from everything and everyone, average people from their experiences, stupid people already have all the answers.",
+    "Without music, life would be a mistake.","When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us."]
+    function quote(){
+        let random=Math.floor(Math.random()*(list.length));
+        document.getElementById("a").innerText=list[random];
+    } 
+</script>
+<style>
+    *{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:30px;
+        padding:3px;
+    }
+    #a{
+        height:250px;
+        width:420px;
+        margin-left:30%;
+        margin-top:10%;
+        border-width:4px;
+        border-style:solid;
+        border-color:black;
+        background:snow;
+        background:linear-gradient(snow,deeppink);
+        color:indigo;
+        padding:15px;
+         }
+    .box{
+        display:flex;
+    }
+    tittle{
+       color:crimson;
+    }
+    body{
+        background-color:lavenderblush
+    }
+    #r{
+        margin-top:30%;
+        margin-left:3%;
+        height:40px;
+        width:100px;
+        background-color: deeppink;
+        font-size: small;
+    }
+</style>
+<body>
+    <tittle><marquee>RANDOM QUOTE GENERATOR</marquee></tittle>
+    <div class="box">
+       <div id="a"></div>
+    <button id="r" onclick="quote()">NEW QUOTE</button>
+    </div>
+</body>
+</html>

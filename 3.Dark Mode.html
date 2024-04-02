@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function colour(){
+        document.body.style.background = "black";
+        document.getElementById("g").style.background="black";
+        document.getElementById("nav").style.background="black";
+        document.getElementById("nav").style.color="white";
+    }
+</script>
+<style>
+    #nav{
+        height:50px;
+        width:100%;
+        margin-top:0%;
+        background:snow;
+        border-color:indigo;
+        background:linear-gradient(snow,deeppink);
+        border-width:3px;
+        border-style: ridge;
+        color:black;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        font-size:20px;
+        display: flex;
+        flex-direction:column;
+    }
+    ul{
+        display:flex;
+        flex-direction:row;
+        
+    }
+    li{
+        list-style-type: none;
+        padding-right:3%;
+    }
+    button{
+        margin-left:94%;
+        background-color:red;
+        color:white;
+        margin-bottom:13%;
+        height:50px;
+        border-radius:50%;
+    }
+    body{
+        background-color:lightcyan;
+    }
+    #a{
+        margin-left:65%;
+        height:20px;
+    }
+    #g{
+        height:520px;
+        width:100%;
+        background-color:lavenderblush;
+        display:flex;
+        flex-wrap: wrap;
+        margin-top:3%;
+    }
+    .aa{
+        height: 158px;
+        width:154px;
+        border-radius:53%;
+        background-image:url("smilyhappy.jpg"); 
+        margin-left:4%;
+        margin-top:1%;
+    }
+    .bb{
+        height:210px;
+        width:400px;
+        background-color:greenyellow;
+        margin-left:590px;
+        padding-top:4%;
+        padding-left:1%;
+        display: grid;
+        font-weight: bolder;
+        font-size:23px;
+        color:indigo;
+        font-family: 'Times New Roman', Times, serif;
+        animation: rose 5s ease infinite ;
+     }
+     @keyframes rose {
+        0%{
+            background:snow;
+            background:linear-gradient(snow,deeppink);
+        }
+        15%{
+            background:snow;
+            background:linear-gradient(snow,purple);
+        }
+        25%{
+            background:snow;
+            background:linear-gradient(snow,blue);
+        }
+        45%{
+            background:snow;
+            background:linear-gradient(snow,lawngreen);
+        }
+        60%{
+            background:snow;
+            background:linear-gradient(snow,rgb(255, 20, 20));
+        }
+        75%{
+            background:snow;
+            background:linear-gradient(snow,lightcyan);
+        }
+        90%{
+            background:snow;
+            background:linear-gradient(snow,deeppink);
+        }
+        
+        
+    }
+    .cc{
+        background-color:blue;
+    }
+</style>
+<body>
+    <div id="nav">
+        <ul>
+            <li>HOME</li>
+            <li>MENU</li>
+            <li>ABOUT</li>
+        </ul>
+        <button onclick="colour()">DARK</button>
+    </div>
+    <div id="g">
+        <div class="aa"></div>
+        <div class="bb">You are the sum total of everything you’ve ever seen, heard, eaten, smelled, been told, forgot ― it’s all there. Everything influences each of us, and because of that I try to make sure that my experiences are positive.</div>
+        <div class="cc"></div>
+    </div>
+</body>
+</html>

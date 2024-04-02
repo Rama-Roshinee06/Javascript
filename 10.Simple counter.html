@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<script>
+    let ad=0;
+    let s=0;
+    let current=0;
+    function add(){
+        ad+=1;
+        current=ad;
+        document.getElementById("b").innerText=ad;
+    }
+    function sub(){
+        current-=1;
+        if(current<0){
+            document.getElementById("b").innerText="NO";
+        }
+        else{
+           document.getElementById("b").innerText=current;
+        }
+    }
+</script>
+<style>
+    #a{
+        height:200px;
+        width:400px;
+        margin-left:30%;
+        color:white;
+        margin-top:4%;
+        border:7px solid black;
+        background:radial-gradient(snow,deeppink);
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    button{
+        font-size:30px;
+        flex-direction:row;
+        background-color:none;
+        padding:0%;
+        height:35px;
+        background-color:lightcoral;
+        border:4px solid black;
+
+    }
+    body{
+        background-color:aqua;
+    }
+    #aa{
+        margin-left:20%;
+        margin-top:30%;
+    }
+    #bb{
+        margin-left:35%;
+    }
+    #b{
+        height:100px;
+        width:115px;
+        background:linear-gradient(indigo,purple);
+        color:white;
+        border:3px solid black;
+        margin-left:35%;
+        font-size:65px;
+        padding-left:20px;
+
+    }
+</style>
+<body>
+    <div id="a">
+        <h1><u>SIMPLE COUNTER CART</u></h1>
+        <div id="b"></div>
+       <button onclick="add()"id="aa"><ion-icon name="add-sharp"></ion-icon></button>
+       <button onclick="sub()" id="bb"><ion-icon name="remove-sharp"></ion-icon></button>
+       </div>
+</body>
+</html>

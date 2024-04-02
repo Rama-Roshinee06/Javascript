@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-size:30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <h1 style="padding-left:20%;color:deeppink;background-color:aliceblue">RANDOM JOKE GENEARATOR</h1>
+    <h1 style="margin-top:8%;font-style:italic;margin-left:6%;color:darkviolet" id="r"></h1>
+    <h1 style="margin-top:2%;font-style:italic;margin-left:6%;color:darkviolet" id="r1"></h1>
+    <button style="height:50px;width:130px;margin-top:10%;margin-left:5%;background-color:rgb(185, 255, 191)" onclick="x()">NEXT</button>
+    <script>
+        function x(){
+         fetch('https://official-joke-api.appspot.com/random_joke')
+         .then(res=>res.json())
+         .then(
+            data=>{
+                document.getElementById('r').innerText=data.setup
+                document.getElementById('r1').innerText="Ans:"+data.punchline
+                
+            }
+         )
+        }
+    </script>
+</body>
+</html>
